@@ -1,0 +1,390 @@
+@import './assets/mixins.sass'
+@import url("/icons/2015/weather-icons/weather-icons.css");
+
+body
+    background-image: url(assets/main-bg.jpg)
+
+
+//conatiner
+.weather-container
+    width: 100%
+    height: 100%
+    margin-top: 50px
+    position: relative
+    +desktop-width-max()
+        margin-top: 100px
+    +portrait-phone() 
+        margin-top: 15px
+    .search-bar
+        position: relative
+        input
+            width: 100%
+            height: 40px
+            background-color: #ffffffdc
+            border: 2px solid #ffffff
+            border-radius: 8px
+            color: #000000
+            display: inline-block
+            text-align: center
+            &:hover
+                border: 2px solid #a1a1a1
+        .fa-box
+            position: absolute
+            color: #000000 
+            position: absolute
+            top: 12px
+            right: 30px
+        
+    .nav-bar
+        text-align: center 
+        +navSize()
+            margin-top: 8px
+        ul 
+            background-color: #ffffffdc
+            border: 2px solid #ffffff
+            width: 100%
+            height: 40px
+            border-radius: 8px
+            padding: 0
+            li 
+                list-style: none
+                display: inline-block
+                font-size: 15px
+                font-weight: bold
+                text-transform: uppercase
+                cursor: pointer
+                padding: 7px 15px  
+                a 
+                    color: #797878
+                    text-decoration: none
+                    &:hover
+                        color: #000000 
+                    
+// NavBar for mobiles
+
+.nav-bar-mobile
+    text-align: center 
+    display: none
+    margin: 0
+    +navSize()
+        display: block
+    ul 
+        background-color: #000000b9
+        border: 2px solid #000
+        width: 100%
+        height: 40px
+        border-radius: 8px
+        padding: 0
+        li 
+            list-style: none
+            display: inline-block
+            font-size: 15px
+            font-weight: bold
+            text-transform: uppercase
+            cursor: pointer
+            padding: 7px 15px  
+            a 
+                color: #797878
+                text-decoration: none
+                &:hover
+                    color: #000000 
+
+
+// info data
+
+.main-container
+    margin: 10px 0 0 0
+    .weather-box
+        +landscape-phone() 
+            text-align: center
+        +portrait-phone()
+            text-align: center
+        .weatherConditions 
+            display: inline-block
+            i 
+                color: #ffffff
+                font-size: 120px
+        .temperature
+            color: #ffffff
+            display: inline-block
+            font-size: 120px
+            padding: 0 0 0 20px
+            position: relative
+            i 
+                font-size: 75px
+                position: absolute
+                top: 20px
+            span 
+                color: #ffffff
+                font-size: 20px
+
+
+.box-row-container
+    position: relative
+    .time-box
+        width: auto
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-right: -50%
+        transform: translate(-50%, -50%) 
+        margin: 0 
+        color: #ffffff
+        font-size: 24px
+        font-weight: bold
+        .city
+            display: inline-block
+        .country
+            display: inline-block
+        +tablet()
+            position: absolute 
+            top: -80px
+            left: 80%
+        +landscape-phone() 
+            position: relative
+            text-align: center
+        +portrait-phone()
+            position: relative
+            text-align: center
+
+
+.details-current-weather
+    width: 100%
+    height: auto
+    margin-top: 10px
+    padding: 15px
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+    background-color: #ffffff1a
+    color:#ffffff
+    div 
+        padding-right: 20px
+        font-size: 25px
+        display: inline-block
+           
+// daily weather part
+.daily-weather-container
+    .daily-title
+        color: #ffffff
+        font-size: 35px
+        text-align: center
+    .scrolling-wrapper 
+        //in case of adding scroll
+        margin-bottom: 30px
+        .box-daily-weather
+            display: inline-block
+            width: 100%
+            height: auto
+            margin: 15px 15px 0 15px
+            padding: 0 !important
+            text-align: center
+            box-shadow: 0 0 10px rgba(0,0,0,0.5)
+            cursor: pointer 
+            background-color: #ffffff1a
+            color:#ffffff
+            &:hover
+                background-color: #ffffff00
+                box-shadow: 0 0 20px rgba(0,0,0,0.5)
+            a 
+                color: inherit
+                text-decoration: none
+            .date-box
+                font-size: 20px
+                padding-top: 30px
+            .temp-day
+                font-size: 75px
+            .feels-like
+                font-size: 20px
+                z-index: 3
+                margin-top: -15px
+            .daily-weather-condition
+                font-size: 18px
+                padding-bottom: 30px
+
+.keep-up-to-date
+    text-align: center
+    color: #ffffff
+    p 
+        font-size: 50px
+        padding-top: 10px
+
+.city-error
+    text-align: center
+    color: #ffffff
+    font-size: 30px
+
+
+//contact's part
+.box-contacts
+    position: relative
+    width: 100%
+    height: 100vh
+    display: flex
+    align-items: center
+    margin: 0 !important
+    .contacts-container
+        a
+            display: inline-block
+            padding: 30px;
+            color: #222
+            text-align: center
+            line-height: 20px
+            margin: 0 4px 0 0
+            border-radius: 5px
+            color: #000000
+            background-color: #ffffff8f
+            border: 1px solid #000000d3
+            text-decoration: none
+            +portrait-phone() 
+                padding: 25px
+            &:hover
+                background-color: #ffffff00
+                color: #ffffff
+                transition: 0.4s
+        .contact-with-me
+            color: #ffffff
+            font-size: 50px
+            margin-bottom: 15px
+            +tablet() 
+                font-size: 38px
+            +landscape-phone()
+                font-size: 38px
+            +portrait-phone()  
+                font-size: 28px
+            i 
+                padding-left: 15px
+    .return-to-other-pages
+        .title-return-pages
+            color: #ffffff
+            font-size: 25px
+            margin-top: 20px
+            .back-home,.back-weather 
+                a 
+                    background: none
+                    border: none
+                    margin: 0
+                    padding: 0
+                    font-weight: bold
+                    color: #ffffff
+                    text-transform: uppercase
+                    &:hover
+                        color: #a0a0a0
+                        text-decoration: none
+
+// open weather modal part
+.box-selected
+    margin: 0
+    color: #ffffff
+    .sel-day
+        font-size: 40px
+        margin-top: 35px
+        +portrait-phone()
+            font-size: 35px
+    .day-column, .night-column, .other-column, .weather-column
+        background-color: #ffffff1a
+        border: 1px solid #c2c2c2
+        font-size: 22px
+        width: 100%
+        margin: 0 10px 10px 10px
+
+        hr
+            margin: 0 
+    .day-title, .night-title, .other-title, .weather-title
+        text-align: center
+        font-size: 30px
+        text-transform: uppercase
+        font-weight: bold
+    .button-back
+        text-align: center
+        margin: 25px 0 25px 0
+        font-size: 18px
+        text-transform: uppercase
+        a 
+            background-color: #ffffff1a
+            border: 1px solid #ffffff
+            padding: 8px 25px 8px 25px
+            cursor: pointer
+            text-decoration: none
+            color: #ffffff
+            &:hover 
+                background-color: #ffffff00
+            i 
+                padding-left: 5px
+
+
+//HomePage
+
+.home-box
+    position: relative
+    width: 100%
+    height: 100vh
+    display: flex
+    align-items: center
+    margin: 0 !important
+    color: #ffffff
+    .title-home
+        font-size: 35px
+        display: inline-block
+        +portrait-phone()  
+            font-size: 25px
+
+    .start
+        text-align: center
+        margin: 25px 0 25px 0
+        font-size: 25px
+        font-weight: bold
+        text-transform: uppercase
+        a 
+            background-color: #ffffff1a
+            border: 1px solid #ffffff
+            padding: 8px 18px 8px 18px
+            cursor: pointer
+            text-decoration: none
+            color: #ffffff
+            &:hover 
+                background-color: #ffffff00
+            i 
+                padding-left: 14px
+    .made
+        font-size: 20px
+
+
+.circle
+    background: #ffffff
+    border-radius: 100%
+    width: 20px
+    height: 20px
+    -webkit-animation: pulsing 2s infinite
+    animation: pulsing 2s infinite
+    display: inline-block
+    margin: 0 15px 0 15px
+
+@-webkit-keyframes pulsing
+  0%
+    -webkit-transform: scale(0.5, 0.5)
+    transform: scale(0.5, 0.5)
+
+  50%
+    -webkit-transform: scale(1, 1)
+    transform: scale(1, 1)
+
+  100%
+    -webkit-transform: scale(0.5, 0.5)
+    transform: scale(0.5, 0.5)
+
+@keyframes pulsing
+  0%
+    -webkit-transform: scale(0.5, 0.5)
+    transform: scale(0.5, 0.5)
+
+  50%
+    -webkit-transform: scale(1, 1)
+    transform: scale(1, 1)
+
+  100%
+    -webkit-transform: scale(0.5, 0.5)
+    transform: scale(0.5, 0.5)
+
+hr 
+    width: 100%
+    height: 1px 
+    background-color: #ffffff
