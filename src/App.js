@@ -15,10 +15,10 @@ const App = () => {
 
      <Redirect to='/Home'/> 
 
-     <Route path='/Home/' render={() => <HomePage />} />
-     <Route path='/Weather/' render={() => <Weather /> }/> 
+     <Route path='/Home' render={() => <HomePage />} />
+     <Route path='/Weather' render={() => <Weather /> }/> 
      <Route path='/WeatherDayStat/:id' render={({match}) => <ModalWeatherContainer match={match} /> }/>
-     <Route path='/Contact/' render={() => <Contact />} />
+     <Route path='/Contact' render={() => <Contact />} />
     </div>
   );
 }

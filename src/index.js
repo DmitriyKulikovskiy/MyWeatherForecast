@@ -10,7 +10,7 @@ import { HashRouter } from 'react-router-dom';
 
 
 
-// HashRouter using for ghPage, in other case use BrowserRouter
+// HashRouter using for ghPage
 ReactDOM.render(
   <HashRouter>
     <Provider store={store}>

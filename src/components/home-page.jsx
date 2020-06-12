@@ -12,7 +12,7 @@ const HomePage = () => {
                     <div className="start">
                         <span className="circle"></span>
 
-                        <NavLink to='/Weather/'>
+                        <NavLink to='/Weather'>
                             Start
                             <i className="fa fa-play" aria-hidden="true"></i>
                         </NavLink>

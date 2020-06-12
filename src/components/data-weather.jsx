@@ -29,7 +29,7 @@ const DataWeather = ({data,isLoading,error}) => {
                             { data.map(i => 
                             <div className='time-box' key={i.id}>
                                 {dateCreator(new Date())}
-                                <br />
+                                <br className='date-br' />
                                 <div className='country'>{i.sys.country},</div>
                                 <div className='city'>{i.name}</div>
                             </div>)}

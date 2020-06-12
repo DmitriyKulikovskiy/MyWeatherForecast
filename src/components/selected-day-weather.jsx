@@ -60,7 +60,7 @@ const OpenDetailWeather = ({match,dailyData}) => {
                         </div>
 
                         <div className="col-lg-12 button-back">
-                            <NavLink to='/Weather/'>
+                            <NavLink to='/Weather'>
                                 Go back
                                 <i className="fa fa-arrow-left" aria-hidden="true"></i>
                             </NavLink>

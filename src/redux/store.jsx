@@ -27,8 +27,7 @@ const reducers = combineReducers({
 })
 
 const persistedState = loadFromLocalStorage()
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ 
-const store = createStore(reducers,persistedState, composeEnhancers(applyMiddleware(thunkMiddleware))) 
+const store = createStore(reducers,persistedState, applyMiddleware(thunkMiddleware)) 
 
 store.subscribe( () => saveToLocalStorage(store.getState()) )
 
