@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e2bb4f2002df35ffb96f25c55e755a93",
+    "revision": "c56970a5d7854c70e598e8ca3cb9c407",
     "url": "/MyWeatherForecast/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MyWeatherForecast/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "f9e8962193aa762665d6",
-    "url": "/MyWeatherForecast/static/css/main.f46a65cf.chunk.css"
+    "revision": "4a208f8094dd0160a70c",
+    "url": "/MyWeatherForecast/static/css/main.4bd4818e.chunk.css"
   },
   {
     "revision": "553a7139d564a584e2de",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MyWeatherForecast/static/js/2.50794d3a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f9e8962193aa762665d6",
-    "url": "/MyWeatherForecast/static/js/main.69ff83e9.chunk.js"
+    "revision": "4a208f8094dd0160a70c",
+    "url": "/MyWeatherForecast/static/js/main.f2d59915.chunk.js"
   },
   {
     "revision": "7a0cfbb8ca153b557cdb",
